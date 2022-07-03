@@ -23,7 +23,7 @@ Installation
 
 ::
 
-    pip install macaddress
+    pip install dynamicscope
 
 
 Usage
