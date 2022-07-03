@@ -84,7 +84,7 @@ to help you detect when it cannot be done:
 Caution
 ~~~~~~~
 
-**Most languages to not have dynamic scope for really good reason.**
+**Most languages do not have dynamic scope for really good reason.**
 
 In a world where dynamic scope is used, *your local variables are part
 of your observable interface*, and the only thing protecting two
