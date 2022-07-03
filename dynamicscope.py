@@ -9,7 +9,7 @@ refer to a variable with the same name, using dynamic scoping rules.
 """
 
 __all__ = ('DYNAMIC_SCOPE',)
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 
 from inspect import currentframe as _currentframe

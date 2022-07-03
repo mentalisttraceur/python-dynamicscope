@@ -64,7 +64,7 @@ If a variable is not found in dynamic scope, an ``AttributeError`` is raised:
 
 .. code::
 
-    AttributeError: 'x' was not found in dynamic scope
+    AttributeError: 'x' not found in dynamic scope
 
 (It is an ``AttributeError`` and not a ``NameError`` because dynamic scope
 is accessed with attribute access - returning the standard error for
