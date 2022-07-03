@@ -41,9 +41,9 @@ To get a variable named ``x`` in the current dynamic scope:
 
     DYNAMIC_SCOPE.x
 
-.. NOTE:: Dynamic scope starts with *your* stack frame, not your caller's
-   stack frame, so if you have a variable named ``x`` in the local scope,
-   ``DYNAMIC_SCOPE.x`` will refer to that ``x``, not bypass it.
+(**Note:** dynamic scope starts with *your* stack frame, not your caller's
+stack frame, so if you have a variable named ``x`` in the local scope,
+``DYNAMIC_SCOPE.x`` will refer to that ``x``, not bypass it.)
 
 To overwrite a existing variable named ``x`` in the current dynamic scope:
 
@@ -57,8 +57,8 @@ To delete a variable named ``x`` found in the current dynamic scope:
 
     del DYNAMIC_SCOPE.x
 
-.. DANGER:: Reaching up from a lower scope to delete variables in callers
-   without consent is a GOTO-level crime under international software law.
+(**DANGER:** reaching up from a lower scope to delete variables in
+callers is a GOTO-level crime under international software law.)
 
 If a variable is not found in dynamic scope, an ``AttributeError`` is raised:
 
@@ -100,12 +100,10 @@ is conventions about how things are named. For example:
 Details
 ~~~~~~~
 
-``dynamicscope`` works by using Python's stack frame inspection,
-specifically |currentframe|_, and |f_locals|.
+``dynamicscope`` works by using Python's stack frame inspection, specifically
+|currentframe|_ and the ``f_locals`` attribute of `frame objects
+<https://docs.python.org/3/reference/datamodel.html#frame-objects>`_.
 
 .. |currentframe| replace:: ``inspect.currentframe()``
 .. _currentframe:
     https://docs.python.org/3/library/inspect.html#inspect.currentframe
-
-.. |f_locals| replace:: the ``.f_locals`` attribute of frame objects.
-.. _f_locals: https://docs.python.org/3/reference/datamodel.html#frame-objects
